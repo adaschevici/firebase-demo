@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRedirect, browserHistory } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import loggerMiddleware from 'redux-logger';
 import sagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
