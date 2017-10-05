@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-import App from '../components/App/App';
+import Atendee from '../components/Atendee/Atendee';
+// import Hub from '../components/Hub/Hub';
 
       {/* <Route path="/atendee" component={Clap} />
+      <Route path="/hub" component={Hub} />,
       <Route path="/hub" component={Hub} /> */}
 export default ([
-      <Route path="/test" component={App} />,
-      <Route path="/" component={App} />
+      <Route path="/atendee" component={Atendee} />,
 ]);
 

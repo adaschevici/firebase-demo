@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import loggerMiddleware from 'redux-logger';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import App from './components/App/App';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import sagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
