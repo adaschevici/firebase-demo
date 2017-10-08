@@ -1,9 +1,16 @@
 import * as actionTypes from './types';
 
-export function userJoined() {
+export function fetchUserId() {
+  return {
+    type: actionTypes.USER_GET_UUID,
+  };
+}
+
+export function userJoined(userId) {
   console.log('Dispatching user_joined');
   return {
     type: actionTypes.USER_JOINED,
+    userId,
   };
 }
 
