@@ -7,7 +7,7 @@ import './Clap.css';
 class Clap extends Component {
   render() {
     return (
-      <div align="center" className="container">
+      <div align="center" className="container" onClick={this.props.clap}>
         <img src={clap} className="clapping" alt="clapping" />
       </div>
     );

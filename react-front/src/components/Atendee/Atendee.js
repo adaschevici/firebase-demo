@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Atendee.css';
 
-import Clap from '../../components/Clap/Clap';
+import Clap from '../../components/Clap/Clap.container';
 
 class Atendee extends Component {
   render() {
