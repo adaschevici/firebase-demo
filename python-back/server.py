@@ -19,6 +19,7 @@ async def user_clapped(request):
 
 app = web.Application()
 app.router.add_get('/join', user_joined)
+app.router.add_get('/clap', user_clapped)
 
 cors = aiohttp_cors.setup(app, defaults={
     "*": aiohttp_cors.ResourceOptions(
