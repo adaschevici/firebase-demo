@@ -13,13 +13,15 @@ async def user_joined(request):
     return web.json_response(uid)
 
 async def user_clapped(request):
+    payload = await request.json()
+    user_id = payload['userId']
     print("User with id %s just clapped" % (user_id))
-    firebase.update_claps(user_id)
-    return web.json_response({ 200: "OK" })
+    firebase.firebase_update_claps(user_id)
+    return web.json_response({ "status": "OK" })
 
 app = web.Application()
 app.router.add_get('/join', user_joined)
-app.router.add_get('/clap', user_clapped)
+app.router.add_post('/clap', user_clapped)
 
 cors = aiohttp_cors.setup(app, defaults={
     "*": aiohttp_cors.ResourceOptions(

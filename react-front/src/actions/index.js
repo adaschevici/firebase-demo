@@ -15,8 +15,14 @@ export function userJoined(userId) {
 }
 
 export function userClapped() {
-  console.log('User clapped');
   return {
     type: actionTypes.USER_CLAPPED,
+  };
+}
+
+export function userClapSuccess() {
+  console.log('User clapped successfuly');
+  return {
+    type: actionTypes.USER_CLAPPED_SUCCESS,
   };
 }

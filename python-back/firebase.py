@@ -38,4 +38,8 @@ def firebase_update_claps(user_id):
     if not user.get('idToken'):
         user = auth.sign_in_with_email_and_password(constants.USER_EMAIL, constants.USER_PASSWORD)
     db = firebase.database()
-    pass
+
+    claps = db.child("users").child(user_id).get(user['idToken']).val()['claps']
+    print(claps)
+
+    db.child("users").child(user_id).update({"claps": claps + 1}, user['idToken'])

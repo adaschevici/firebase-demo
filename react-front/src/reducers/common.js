@@ -7,8 +7,7 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.USER_JOINED:
       return { ...state, userId: action.userId };
-    case actionTypes.USER_CLAPPED:
-      console.log('Matched some action');
+    case actionTypes.USER_CLAPPED_SUCCESS:
       return state;
     default:
       return state;
