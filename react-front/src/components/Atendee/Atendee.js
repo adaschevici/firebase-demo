@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './Atendee.css';
 
 import Clap from '../../components/Clap/Clap.container';
@@ -7,6 +9,7 @@ class Atendee extends Component {
   componentWillMount() {
     this.props.join();
   }
+
   render() {
     return (
       <div className="App">
@@ -15,5 +18,9 @@ class Atendee extends Component {
     );
   }
 }
+
+Atendee.propTypes = {
+  join: PropTypes.func.isRequired,
+};
 
 export default Atendee;

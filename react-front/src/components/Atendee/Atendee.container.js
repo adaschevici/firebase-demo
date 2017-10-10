@@ -4,16 +4,14 @@ import { bindActionCreators } from 'redux';
 import { fetchUserId } from '../../actions';
 import Atendee from './Atendee';
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
     join: fetchUserId,
-  }, dispatch);
-};
+  }, dispatch)
+);
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(Atendee);
 

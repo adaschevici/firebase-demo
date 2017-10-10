@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import clap from '../../assets/clap.svg';
 import './Clap.css';
-
-
 
 class Clap extends Component {
   render() {
@@ -13,5 +12,9 @@ class Clap extends Component {
     );
   }
 }
+
+Clap.propTypes = {
+  clap: PropTypes.func.isRequired,
+};
 
 export default Clap;
