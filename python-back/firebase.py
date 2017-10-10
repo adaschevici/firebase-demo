@@ -40,6 +40,5 @@ def firebase_update_claps(user_id):
     db = firebase.database()
 
     claps = db.child("users").child(user_id).get(user['idToken']).val()['claps']
-    print(claps)
 
     db.child("users").child(user_id).update({"claps": claps + 1}, user['idToken'])
