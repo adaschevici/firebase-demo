@@ -6,12 +6,13 @@ import './Hub.css';
 class Hub extends Component {
 
   componentDidMount() {
-    this.props.fetchData();
+    this.props.listenData();
   }
 
   render() {
     return (
       <div className="App">
+        Say hello no?
       </div>
     );
   }
@@ -19,7 +20,7 @@ class Hub extends Component {
 
 
 Hub.propTypes = {
-  fetchData: PropTypes.func.isRequired,
+  listenData: PropTypes.func.isRequired,
 };
 
 export default Hub;
