@@ -10,7 +10,6 @@ export default (state = INITIAL_STATE, action) => {
     case actionTypes.USER_CLAPPED_SUCCESS:
       return state;
     case actionTypes.UPDATE_USERS:
-      console.log(action.users);
       return { ...state, users: action.users };
     default:
       return state;

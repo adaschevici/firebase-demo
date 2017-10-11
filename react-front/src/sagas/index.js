@@ -30,7 +30,8 @@ function createEventChannel() {
 
 function* updatedItemSaga() {
   const updateChannel = createEventChannel();
-  while (true) {
+  const running = true;
+  while (running) {
     const users = yield take(updateChannel);
     yield put(updateUsers(users));
   }
