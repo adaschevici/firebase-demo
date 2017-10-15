@@ -1,0 +1,15 @@
+.hub-container {
+  text-align: center;
+  padding-top: 13em;
+  margin-left: 10em;
+  margin-right: 10em;
+  height: 60em;
+}
+
+.bubble-chart-text {
+  display: none;
+}
+
+circle {
+  fill: #9ecae1;
+}

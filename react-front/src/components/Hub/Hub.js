@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './Hub.css';
 import Bubbles from '../../components/Bubbles/Bubbles.container';
+import './Hub.css';
 
 class Hub extends Component {
 
@@ -12,7 +12,7 @@ class Hub extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="hub-container">
         <Bubbles />
       </div>
     );

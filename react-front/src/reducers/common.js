@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import * as actionTypes from '../actions/types';
 
 
@@ -10,7 +11,9 @@ export default (state = INITIAL_STATE, action) => {
     case actionTypes.USER_CLAPPED_SUCCESS:
       return state;
     case actionTypes.UPDATE_USERS:
-      return { ...state, users: action.users };
+      const users = _.keys(action.users).map(userId => userId)
+        .map(userId => ({ id: userId, claps: action.users[userId].claps }));
+      return { ...state, users };
     default:
       return state;
   }

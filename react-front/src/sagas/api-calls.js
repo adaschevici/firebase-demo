@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+import env from '../.env';
+
 export function fetchUserId() {
   console.log('Dispatching get_user_UUID');
-  return axios.get('http://localhost:8080/join');
+  return axios.get(`${env.API_URL}/join`);
 }
 
 export function postUserClap(userId) {
@@ -10,5 +12,5 @@ export function postUserClap(userId) {
   const payload = {
     userId,
   };
-  return axios.post('http://localhost:8080/clap', payload);
+  return axios.post(`${env.API_URL}/clap`, payload);
 }
