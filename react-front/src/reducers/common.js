@@ -10,10 +10,11 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, userId: action.userId };
     case actionTypes.USER_CLAPPED_SUCCESS:
       return state;
-    case actionTypes.UPDATE_USERS:
+    case actionTypes.UPDATE_USERS: {
       const users = _.keys(action.users).map(userId => userId)
         .map(userId => ({ id: userId, claps: action.users[userId].claps }));
       return { ...state, users };
+    }
     default:
       return state;
   }
