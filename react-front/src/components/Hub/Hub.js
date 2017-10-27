@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Bubbles from '../../components/Bubbles/Bubbles.container';
+import env from '../../.env';
 import './Hub.css';
 
 class Hub extends Component {
@@ -11,11 +12,12 @@ class Hub extends Component {
   }
 
   render() {
-    return (
+    return ([
       <div className="hub-container">
         <Bubbles />
-      </div>
-    );
+        <a href={env.DEMO_URL}>{env.DEMO_URL}</a>
+      </div>,
+    ]);
   }
 }
 
