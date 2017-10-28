@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './Atendee.css';
+import './Attendee.css';
 
 import Clap from '../../components/Clap/Clap.container';
 
@@ -12,7 +12,7 @@ class Atendee extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="Attendee">
         <Clap />
       </div>
     );

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { fetchUserId } from '../../actions';
-import Atendee from './Atendee';
+import Attendee from './Attendee';
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
@@ -13,5 +13,4 @@ const mapDispatchToProps = dispatch => (
 export default connect(
   null,
   mapDispatchToProps,
-)(Atendee);
-
+)(Attendee);
