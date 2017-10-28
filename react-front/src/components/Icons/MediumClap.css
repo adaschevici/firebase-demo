@@ -1,0 +1,13 @@
+.svgIcon {
+    display: inline-block
+}
+
+.svgIcon--clapFilled {
+  fill: #03a87c;
+  color: #03a87c;
+}
+
+.svgIcon--clap {
+  fill: #03a87c;
+  color: #03a87c;
+}
