@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import clap from '../../assets/clap.svg';
+import { MediumClapFilled, MediumClapTraced } from '../Icons/MediumClap';
 import './Clap.css';
 
 class Clap extends Component {
   render() {
     return (
       <div align="center" className="container" onClick={this.props.clap}>
-        <img src={clap} className="clapping" alt="clapping" />
+        <MediumClapFilled width="90" height="90" />
+        <MediumClapTraced width="90" height="90" />
       </div>
     );
   }
