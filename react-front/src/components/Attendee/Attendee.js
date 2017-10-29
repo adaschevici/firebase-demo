@@ -7,14 +7,14 @@ import Clap from '../../components/Clap/Clap.container';
 
 class Atendee extends Component {
   componentWillMount() {
-    this.props.join();
+    // this.props.join();
   }
 
   render() {
     return (
-      <div className="Attendee">
+      <button className="button button--large button--circle button--withChrome u-baseColor--buttonNormal button--withIcon button--withSvgIcon clapButton js-actionMultirecommendButton clapButton--largePill u-relative u-foreground u-width60 u-height60 u-accentColor--textNormal u-accentColor--buttonNormal is-active" style={{ animation: 'pop 500ms 1 running' }}>
         <Clap />
-      </div>
+      </button>
     );
   }
 }
