@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Attendee.css';
 
-import Clap from '../../components/Clap/Clap.container';
+import Clap from '../../components/Clap/Clap';
 
 class Atendee extends Component {
   constructor(props) {
@@ -18,7 +18,10 @@ class Atendee extends Component {
 
   render() {
     return (
-      <button className={this.pulsatingClass} style={{ top: 14, padding: 2 }}>
+      <button
+        className={this.pulsatingClass}
+        style={{ top: 14, padding: 2 }}
+      >
         <Clap />
       </button>
     );
@@ -27,6 +30,7 @@ class Atendee extends Component {
 
 Atendee.propTypes = {
   join: PropTypes.func.isRequired,
+  clap: PropTypes.func.isRequired,
 };
 
 export default Atendee;

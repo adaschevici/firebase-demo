@@ -1,3 +1,44 @@
+.u-absolute {
+    position: absolute!important
+}
+
+.u-top0 {
+    top: 0!important
+}
+
+.u-left0 {
+    left: 0!important
+}
+
+.u-disablePointerEvents {
+    pointer-events: none!important
+}
+
+.clapRadial {
+    position: absolute
+}
+
+.clapRadial--dot {
+    top: calc(48%);
+    left: -5px;
+    transform-origin: 35px;
+    width: 2px;
+    height: 2px;
+    border-radius: 999em;
+    background-color: #218799
+}
+
+.clapRadial--triangle {
+    top: calc(44%);
+    left: -9px;
+    transform-origin: 39px;
+    width: 0;
+    height: 0;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 6px solid #EE6F70
+}
+
 @keyframes burst-dot {
   0% {
     opacity: 0;

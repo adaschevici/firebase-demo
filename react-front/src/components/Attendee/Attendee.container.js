@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchUserId } from '../../actions';
+import { fetchUserId, userClapped } from '../../actions';
 import Attendee from './Attendee';
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
     join: fetchUserId,
+    clap: userClapped,
   }, dispatch)
 );
 
