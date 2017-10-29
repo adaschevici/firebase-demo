@@ -1,6 +1,8 @@
 .button {
     display: inline-block;
     position: relative;
+    margin-left: 28%;
+    margin-top: 50%;
     color: rgba(0, 0, 0, .54);
     background: rgba(0, 0, 0, 0);
     font-size: 16px;
