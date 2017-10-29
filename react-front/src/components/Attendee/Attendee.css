@@ -80,3 +80,144 @@
     display: inline-block;
     vertical-align: top
 }
+
+.button--withSvgIcon .svgIcon {
+    top: -1px;
+    position: relative
+}
+
+.clapButton .svgIcon--clap,
+.clapButton .svgIcon--clapFilled,
+.clapButton:hover .svgIcon--clap,
+.clapButton:hover .svgIcon--clapFilled {
+    fill: #03a87c;
+    color: #34e79a
+}
+
+.clapButton:disabled .svgIcon--clap,
+.clapButton:disabled .svgIcon--clapFilled {
+    fill: #000!important;
+    color: #000!important
+}
+
+.clapButton--largePill:hover+.clapUndo,
+.clapUndo:hover {
+    transform: translateX(30px)
+}
+
+
+.clapButton--largePill:not(.is-active)+.clapUndo {
+    display: none
+}
+
+
+.clapButton--largePill:active+.clapUndo {
+    transform: translateX(0);
+    transition: transform .2s cubic-bezier(.25, 0, .6, 1.4)
+}
+
+.clapButton--largePill.is-active {
+    background: #fff;
+    color: #03a87c
+}
+
+
+.clapButton--largePill.is-active:hover,
+.clapButton--largePill:hover {
+    border-color: #03a87c;
+    color: #03a87c;
+    fill: #03a87c
+}
+
+.clapButton--largePill:focus {
+    border-color: rgba(0, 0, 0, .3)
+}
+
+.clapButton--largePill:focus .svgIcon {
+    color: #03a87c;
+    fill: #03a87c
+}
+
+.clapButton--largePill.is-active .button-activeState .svgIcon--clap,
+.clapButton--largePill.is-active .button-activeState .svgIcon--clapFilled {
+    fill: #03a87c;
+    color: #03a87c
+}
+
+.clapButton:disabled .svgIcon--clap,
+.clapButton:disabled .svgIcon--clapFilled {
+    fill: #000!important;
+    color: #000!important
+}
+
+.clapButton--largePill:not(.is-active):hover {
+    animation: pulse-shadow--collection 2s infinite
+}
+
+.clapButton--largePill.clap-onboarding {
+    animation: pulse-shadow--onboarding 3s infinite
+}
+
+.clapButton--largePill.clap-onboardingcollection {
+    animation: pulse-shadow--onboarding-collection 3s infinite
+}
+
+.clapButton--largePill:active,
+.clapButton--largePill:hover {
+    animation: none
+}
+
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 0 0 #34e79a
+    }
+    70% {
+        box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0)
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)
+    }
+}
+
+@keyframes pulse-shadow--collection {
+    0% {
+        box-shadow: 0 0
+    }
+    70% {
+        box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0)
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)
+    }
+}
+
+@keyframes pulse-shadow--onboarding {
+    0% {
+        box-shadow: 0 0 0 0 #34e79a
+    }
+    30% {
+        box-shadow: 0 0 0 0 #34e79a
+    }
+    80% {
+        box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0)
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)
+    }
+}
+
+@keyframes pulse-shadow--onboarding-collection {
+    0% {
+        box-shadow: 0 0
+    }
+    30% {
+        box-shadow: 0 0
+    }
+    80% {
+        box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0)
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)
+    }
+}
+
