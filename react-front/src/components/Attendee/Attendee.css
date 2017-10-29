@@ -48,4 +48,35 @@
     padding: 0
 }
 
+.button--circle {
+    padding: 0;
+    width: 37px;
+    text-align: center;
+    border-radius: 100%
+}
 
+.button--withChrome {
+    height: 37px;
+    line-height: 35px;
+    padding: 0 16px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 999em
+}
+
+
+.button--withChrome.button--large {
+    height: 180px;
+    padding: 0 18px;
+    line-height: 42px
+}
+
+.button--withChrome:active,
+.button--withChrome:focus {
+    border-color: rgba(0, 0, 0, .68)
+}
+
+.button.button--withIcon.is-active>.button-activeState,
+.button.button--withIcon>.button-defaultState {
+    display: inline-block;
+    vertical-align: top
+}
