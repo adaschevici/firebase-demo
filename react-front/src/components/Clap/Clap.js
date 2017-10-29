@@ -6,12 +6,10 @@ import './Clap.css';
 
 class Clap extends Component {
   render() {
-    return (
-      <div align="center" className="container" onClick={this.props.clap}>
-        <MediumClapTraced width="150" height="150" />
-        <Confetti />
-      </div>
-    );
+    return ([
+      <MediumClapTraced width="150" height="150" />,
+      <Confetti />,
+    ]);
   }
 }
 

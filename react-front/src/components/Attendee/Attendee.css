@@ -1,3 +1,12 @@
+.u-relative {
+  position: relative!important
+}
+
+.u-foreground {
+  position: relative!important;
+  z-index: 100!important
+}
+
 .button {
   display: inline-block;
   position: relative;
@@ -40,4 +49,124 @@
 .button--withChrome:active,
 .button--withChrome:focus {
   border-color: rgba(0, 0, 0, .68)
+}
+
+.button--withChrome.button--large {
+    height: 44px;
+    padding: 0 18px;
+    line-height: 42px
+}
+
+.button--large,
+.button--large.button--chromeless,
+.button--large.button--link {
+    font-size: 17px
+}
+
+.button--large.button--circle {
+    width: 45%;
+    height: 200px;
+    padding: 0
+}
+
+.button--circle {
+    padding: 0;
+    margin: 145px;
+    width: 37px;
+    text-align: center;
+    border-radius: 100%
+}
+
+.button--primary.button--withChrome.is-active {
+  background: #03a87c;
+  border-color: #03a87c
+}
+
+.button.button--withIcon.is-active>.button-activeState,
+.button.button--withIcon>.button-defaultState {
+  display: inline-block;
+  vertical-align: top
+}
+
+.clapButton--largePill:hover+.clapUndo,
+.clapUndo:hover {
+  transform: translateX(30px)
+}
+
+.clapButton--largePill:not(.is-active)+.clapUndo {
+  display: none
+}
+
+.clapButton--largePill:active+.clapUndo {
+  transform: translateX(0);
+  transition: transform .2s cubic-bezier(.25, 0, .6, 1.4)
+}
+
+.clapButton .svgIcon--clap,
+.clapButton .svgIcon--clapFilled,
+.clapButton:hover .svgIcon--clap,
+.clapButton:hover .svgIcon--clapFilled {
+  fill: #03a87c;
+  color: #34e79a
+}
+
+.clapButton--largePill.is-active {
+  background: #fff;
+  color: #03a87c
+}
+
+.clapButton--largePill.is-active:hover,
+.clapButton--largePill:hover {
+  border-color: #03a87c;
+  color: #03a87c;
+  fill: #03a87c
+}
+
+.clapButton--largePill:focus {
+  border-color: rgba(0, 0, 0, .3)
+}
+
+.clapButton--largePill:focus .svgIcon {
+  color: #03a87c;
+  fill: #03a87c
+}
+
+.clapButton--largePill.is-active .button-activeState .svgIcon--clap,
+.clapButton--largePill.is-active .button-activeState .svgIcon--clapFilled {
+  fill: #03a87c;
+  color: #03a87c
+}
+
+.clapButton:disabled .svgIcon--clap,
+.clapButton:disabled .svgIcon--clapFilled {
+  fill: #000!important;
+  color: #000!important
+}
+
+.clapButton--largePill:not(.is-active):hover {
+  animation: pulse-shadow--collection 2s infinite
+}
+
+.clapButton--largePill.clap-onboarding {
+  animation: pulse-shadow--onboarding 3s infinite
+}
+
+.clapButton--largePill.clap-onboardingcollection {
+  animation: pulse-shadow--onboarding-collection 3s infinite
+}
+
+.clapButton--largePill:active,
+.clapButton--largePill:hover {
+  animation: none
+}
+
+.button--withSvgIcon .svgIcon {
+  top: -1px;
+  position: relative
+}
+
+.button.button--withIcon.is-active>.button-activeState,
+.button.button--withIcon>.button-defaultState {
+  display: inline-block;
+  vertical-align: top
 }
