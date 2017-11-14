@@ -180,6 +180,81 @@
     z-index: 100!important
 }
 
+.clapRadial {
+    position: absolute
+}
+
+.clapRadial--dot {
+    top: calc(48%);
+    left: 15px;
+    transform-origin: 62px 32px;
+    margin-bottom: 140px;
+    width: 2px;
+    height: 2px;
+    border-radius: 999em;
+    background-color: #218799
+}
+
+.clapRadial--triangle {
+    top: calc(44%);
+    left: 19px;
+    transform-origin: 66px 35px;
+    margin-bottom: 140px;
+    width: 0;
+    height: 0;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 6px solid #EE6F70
+}
+
+.u-width260 {
+    margin-top: -120px;
+    margin-left: 10px;
+    width: 260px!important;
+}
+
+.u-width265 {
+    width: 265px!important
+}
+
+.u-width280 {
+    width: 280px!important
+}
+
+.u-width300 {
+    width: 300px!important
+}
+
+.u-width320 {
+    width: 320px!important
+}
+
+.u-width330 {
+    width: 330px!important
+}
+
+.u-width350 {
+    width: 350px!important
+}
+.u-height260 {
+    height: 260px!important
+}
+
+.u-height265 {
+    height: 265px!important
+}
+
+.u-height272 {
+    height: 272px!important
+}
+
+.u-height280 {
+    height: 280px!important
+}
+
+.u-height300 {
+    height: 300px!important
+}
 @keyframes pulse-shadow {
     0% {
         box-shadow: 0 0 0 0 #34e79a
@@ -234,3 +309,31 @@
     }
 }
 
+@keyframes burst-dot {
+    0% {
+        opacity: 0;
+        transform: scale(1)
+    }
+    32% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2.5)
+    }
+}
+
+@keyframes burst-triangle {
+    0% {
+        opacity: 0;
+        transform: scale(1)
+    }
+    32% {
+        opacity: 1;
+        transform: scale(1.3)
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.6)
+    }
+}
