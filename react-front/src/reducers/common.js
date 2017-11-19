@@ -12,7 +12,11 @@ export default (state = INITIAL_STATE, action) => {
       return state;
     case actionTypes.UPDATE_USERS: {
       const users = _.keys(action.users).map(userId => userId)
-        .map(userId => ({ id: userId, claps: action.users[userId].claps }));
+        .map(userId => ({
+          id: userId,
+          claps: action.users[userId].claps,
+          colorValue: action.users[userId].colorValue,
+        }));
       return { ...state, users };
     }
     default:
