@@ -57,7 +57,7 @@ class Atendee extends Component {
   }
 
   componentWillMount() {
-    // this.props.join();
+    this.props.join();
   }
 
   clap() {

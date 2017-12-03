@@ -1,4 +1,6 @@
 import pyrebase
+import random
+
 import constants
 
 config = {
@@ -27,7 +29,8 @@ def firebase_insert_user(user_id):
 
     # data to save
     data = {
-        "claps": 0
+        "claps": 0,
+        "colorValue": random.randint(1, 51)
     }
 
     # Pass the user's idToken to the push method
