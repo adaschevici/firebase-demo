@@ -15,7 +15,11 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: cd react-front && npm install
+      - run:
+          name: install dependencies
+          command: |
+            cd react-front
+            npm install
 
       - save_cache:
           paths:
@@ -23,10 +27,26 @@ jobs:
           key: v1-dependencies-{{ checksum "react-front/package.json" }}
 
       # run tests!
-      - run: cd react-front && npm test
+      - run:
+          name: run javascript tests
+          command: |
+            cd react-front
+            npm test
+
+  test_backend:
+    docker:
+      - image: circleci/python:3.6.3
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - test_frontend
+      - test_backend:
+          requires:
+            - test_frontend
