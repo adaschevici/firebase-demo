@@ -16,10 +16,11 @@ jobs:
       - checkout
 
   test_frontend:
-      working_directory: ~/repo/react-front
       # Download and cache dependencies
       docker:
           - image: circleci/node:8.9.1
+
+      working_directory: ~/repo/react-front
       steps:
           - restore_cache:
               keys:
