@@ -1,19 +1,22 @@
 import pyrebase
 import random
 
-import constants
+try:
+    import constants
 
-config = {
-    "apiKey": constants.API_KEY,
-    "authDomain": constants.AUTH_DOMAIN,
-    "databaseURL": constants.DB_URL,
-    "projectId": constants.PROJECT_ID,
-    "storageBucket": constants.STORAGE_BUCKET,
-    "messagingSenderId": constants.SENDER_ID
-}
+    config = {
+        "apiKey": constants.API_KEY,
+        "authDomain": constants.AUTH_DOMAIN,
+        "databaseURL": constants.DB_URL,
+        "projectId": constants.PROJECT_ID,
+        "storageBucket": constants.STORAGE_BUCKET,
+        "messagingSenderId": constants.SENDER_ID
+    }
 
-firebase = pyrebase.initialize_app(config)
-auth = firebase.auth()
+    firebase = pyrebase.initialize_app(config)
+    auth = firebase.auth()
+except Exception:
+    pass
 user = {}
 
 def firebase_insert_user(user_id):
