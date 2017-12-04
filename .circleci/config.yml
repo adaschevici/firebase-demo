@@ -15,6 +15,7 @@ jobs:
     steps:
       - checkout
 
+  test_frontend:
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -37,3 +38,6 @@ workflows:
   build_and_test:
     jobs:
       - build
+      - test_frontend:
+          requires:
+              - build
