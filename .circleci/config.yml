@@ -10,10 +10,12 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo/react-front
+    working_directory: ~/repo
 
     steps:
       - checkout
+
+      - run: cd react-front
 
       # Download and cache dependencies
       - restore_cache:
