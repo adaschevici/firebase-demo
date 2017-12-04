@@ -17,26 +17,21 @@ jobs:
 
   test_frontend:
       # Download and cache dependencies
-      docker:
-          - image: circleci/node:8.9.1
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "react-front/package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
-      working_directory: ~/repo/react-front
-      steps:
-          - restore_cache:
-              keys:
-              - v1-dependencies-{{ checksum "package.json" }}
-              # fallback to using the latest cache if no exact match is found
-              - v1-dependencies-
+      - run: cd react-front && npm install
 
-          - run: npm install
+      - save_cache:
+          paths:
+            - react-front/node_modules
+          key: v1-dependencies-{{ checksum "react-front/package.json" }}
 
-          - save_cache:
-              paths:
-                - node_modules
-              key: v1-dependencies-{{ checksum "package.json" }}
-
-          # run tests!
-          - run: npm test
+      # run tests!
+      - run: cd react-front && npm test
 
   test_backend:
       # Download and cache dependencies
