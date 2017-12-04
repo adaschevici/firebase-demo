@@ -23,8 +23,7 @@ jobs:
           - v1-dependencies-
 
       - run:
-         - cd react-front
-         - npm install
+         - cd react-front && npm install
 
       - save_cache:
           paths:
