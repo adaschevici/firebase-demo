@@ -67,6 +67,7 @@ jobs:
           command: |
             cd python-back
             . venv/bin/activate
+            cd api
             pytest --cov-config ../.coveragerc --cov=server .
 
       - store_artifacts:
