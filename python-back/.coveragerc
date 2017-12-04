@@ -2,4 +2,4 @@
 source=api
 
 [report]
-fail_under=97
+fail_under=50
